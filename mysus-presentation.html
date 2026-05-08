@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My SUS App - UX Case Study</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', 'Poppins', system-ui, -apple-system, sans-serif;
+            background: #073b4c;
+            line-height: 1.5;
+            padding: 2rem 1rem;
+        }
+        .slide {
+            max-width: 900px;
+            margin: 2rem auto;
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+        .slide-header {
+            background: #073b4c;
+            color: white;
+            padding: 1rem 2rem;
+            font-size: 0.75rem;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+        .slide-content {
+            padding: 2.5rem;
+        }
+        h1 {
+            color: #06d6a0;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        h2 {
+            color: #118ab2;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            border-left: 5px solid #ffd166;
+            padding-left: 1rem;
+        }
+        h3 {
+            color: #073b4c;
+            margin: 1.5rem 0 0.5rem;
+            font-size: 1rem;
+        }
+        .image{
+            max-width: 500px;
+            padding: 20px;
+        }
+        .imageprop{
+            max-width: 200px;
+            padding: 20px;
+        }
+        .subtitle {
+            color: #4a6274;
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        ul {
+            margin: 1rem 0;
+            padding-left: 1.5rem;
+        }
+        li {
+            margin: 0.5rem 0;
+        }
+        .pain-point {
+            background: #f8f9fa;
+            border-left: 4px solid #ef476f;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+        }
+        .pain-point strong {
+            color: #ef476f;
+        }
+        .two-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin: 1rem 0;
+        }
+        .three-columns {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin: 1rem 0;
+        }
+        .card {
+            background: #f0f4f8;
+            padding: 1rem;
+            border-radius: 12px;
+            border-top: 4px solid #06d6a0;
+        }
+        .card h4 {
+            color: #073b4c;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        .badge {
+            display: inline-block;
+            background: #06d6a0;
+            color: #073b4c;
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+        .mockup-placeholder {
+            background: #e9ecef;
+            border: 2px dashed #adb5bd;
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            color: #6c757d;
+            margin: 1rem 0;
+        }
+        .footer-note {
+            text-align: center;
+            padding: 1rem;
+            background: #f8f9fa;
+            font-size: 0.8rem;
+            color: #6c757d;
+        }
+        hr {
+            margin: 1rem 0;
+            border: none;
+            height: 1px;
+            background: #dee2e6;
+        }
+        .persona-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin: 1rem 0;
+        }
+        .persona-card {
+            background: #f0f4f8;
+            padding: 1.2rem;
+            border-radius: 16px;
+            border-left: 5px solid #ef476f;
+        }
+        .persona-name {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #073b4c;
+            margin-bottom: 0.5rem;
+        }
+        .persona-detail {
+            font-size: 0.8rem;
+            color: #4a6274;
+            margin-top: 0.5rem;
+            line-height: 1.4;
+        }
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .slide {
+                margin: 0 auto 1rem auto;
+                box-shadow: none;
+                border: 1px solid #ddd;
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+            .mockup-placeholder {
+                border: 1px solid #ccc;
+                background: #f5f5f5;
+            }
+        }
+        @media (max-width: 600px) {
+            .slide-content { padding: 1.5rem; }
+            h1 { font-size: 1.8rem; }
+            .two-columns, .persona-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- SLIDE 1 - TITLE -->
+    <div class="slide">
+        <div class="slide-header">MY SUS APP — CASE STUDY</div>
+        <div class="slide-content">
+            <h1>My SUS App</h1>
+            <p class="subtitle">Project Week 1 - Transition into UX for Healthcare</p>
+            <p style="margin-top: 2rem;"><strong>Lenise Santana</strong></p>
+        </div>
+    </div>
+
+    <!-- SLIDE 2 - USER RESEARCH (formerly slide 5) -->
+    <div class="slide">
+        <div class="slide-header">USER RESEARCH</div>
+        <div class="slide-content">
+            <h2>Research summary</h2>
+            <p>Initial research was conducted through secondary analysis of two official data sources: the Brazilian National Ombudsman Report (OuvSUS 2024) and the São Paulo primary care management system (SIGA-SP 2024). Initial assumptions focused on access barriers and lack of information. After analysis, key findings revealed that high solicitation volume does not translate into high attendance, and geographic inequality exists even within the same city. The research shifted focus from "access to booking" to "patient retention, reminders, and communication."</p>
+        </div>
+    </div>
+
+    <!-- SLIDE 3 - PROBLEM & GOAL (formerly slide 3, moved after research) -->
+    <div class="slide">
+        <div class="slide-header">PROBLEM & GOAL</div>
+        <div class="slide-content">
+            <h2>The problem</h2>
+            <ul>
+                <li>High volume of complaints about delays in service and access (OuvSUS 2024)</li>
+                <li>38,486 solicitations for medium-complexity care — waiting time is the #1 complaint</li>
+                <li>Only 0.5% of interactions use digital channels — patients lack information about their rights</li>
+                <li>No official patient information system exists about what to expect before an appointment</li>
+                <li>Primary loss (no-show) ranges from 9.6% to 37.8% across São Paulo (SIGA-SP)</li>
+            </ul>
+            <h2>The goal</h2>
+            <ul>
+                <li>Reduce no-show rates through smart reminders and easy cancellation</li>
+                <li>Educate patients about SUS rights, protocols, and available services</li>
+                <li>Create a direct feedback channel between patients and UBS management</li>
+                <li>Increase community bonding through local activities and announcements</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SLIDE 4 - PAIN POINTS (formerly slide 6) -->
+    <div class="slide">
+        <div class="slide-header">PAIN POINTS</div>
+        <div class="slide-content">
+            <div class="pain-point">
+                <strong>🔴 No-show rates</strong><br>
+                Primary loss ranges from 9.6% to 37.8% across São Paulo.<br>
+                <span class="badge">Solution</span> Smart reminders + one-click cancellation with automatic vacancy reallocation.
+            </div>
+            <div class="pain-point">
+                <strong>🔴 Lack of information</strong><br>
+                Only 0.5% of interactions use digital channels.<br>
+                <span class="badge">Solution</span> Curated educational content about SUS rights and protocols.
+            </div>
+            <div class="pain-point">
+                <strong>🔴 Prevention is underused</strong><br>
+                Low engagement in proactive health. No data on preventive exam adherence.<br>
+                <span class="badge">Solution</span> AI-powered preventive exam reminders.
+            </div>
+            <div class="pain-point">
+                <strong>🔴 No direct feedback channel</strong><br>
+                91.66% of denunciations are archived due to lack of materiality.<br>
+                <span class="badge">Solution</span> Integrated ombudsman with AI that guides users to provide complete information.
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 5 - PERSONAS (4 personas) -->
+    <div class="slide">
+        <div class="slide-header">PERSONAS</div>
+        <div class="slide-content">
+            <h2>Who are our users?</h2>
+            <div class="persona-grid">
+                <div class="persona-card">
+                    <div class="persona-name">👩 Maria da Silva, 52</div>
+                    <div class="persona-detail">Administrative assistant from Parelheiros. Manages chronic hypertension. Often forgets appointment dates and loses paper cards.</div>
+                </div>
+                <div class="persona-card">
+                    <div class="persona-name">👨 João Santos, 67</div>
+                    <div class="persona-detail">Retired from Lapa. Needs regular check-ups and preventive exams. Doesn't use smartphones much — needs simple interface.</div>
+                </div>
+                <div class="persona-card">
+                    <div class="persona-name">👩 Carla Oliveira, 34</div>
+                    <div class="persona-detail">Teacher and mother of two from Centro. Juggles work and kids' health appointments. Needs quick, reliable reminders.</div>
+                </div>
+                <div class="persona-card">
+                    <div class="persona-name">👨 Lucas Pereira, 28</div>
+                    <div class="persona-detail">Delivery driver from Parelheiros. Uses WhatsApp daily but never used a health app. Needs low-data, fast-loading experience.</div>
+                </div>
+            </div>
+            <p style="font-size: 0.75rem; color: #6c757d; margin-top: 1rem;">🎯 All personas share one pain point: paper appointment management and lack of digital communication from UBS.</p>
+        </div>
+    </div>
+
+    <!-- SLIDE 6 - USER JOURNEY MAP -->
+    <div class="slide">
+        <div class="slide-header">USER JOURNEY MAP</div>
+        <div class="slide-content">
+            <h2>Current journey: Paper-based scheduling</h2>
+            <p>The patient receives an appointment via <strong>paper card</strong> at the UBS. The UBS relies on the patient's memory and willingness to attend — with no reminders or confirmations.</p>
+            <div class="two-columns" style="margin-top: 1.5rem;">
+                <div class="card"><strong>📄 Receives paper card</strong><br>Patient leaves UBS with a small paper card containing date/time.</div>
+                <div class="card"><strong>❓ Loses or forgets</strong><br>Paper gets lost, stained, or forgotten in a drawer.</div>
+                <div class="card"><strong>😢 No-shows (9.6% to 37.8%)</strong><br>Patient doesn't remember or can't attend — no way to cancel or reallocate slot.</div>
+                <div class="card"><strong>⏳ Another patient waits longer</strong><br>Vacant slot is wasted. Someone on the waiting list misses an opportunity.</div>
+            </div>
+          
+        </div>
+    </div>
+
+    <!-- SLIDE 7 - WIREFRAMES (formerly slide 9) -->
+    <div class="slide">
+        <div class="slide-header">WIREFRAMES</div>
+        <div class="slide-content">
+            <h2>Paper wireframes</h2>
+            <p>Initial sketches focused on simplifying the flow: homepage with alert banner, next appointment block, community activities grid, and SUS curiosities section. Removed reschedule option — only confirm or cancel.</p>
+            <div ><img src="skeches.jpeg" class="image"></div>
+            
+        </div>
+    </div>
+
+    <!-- SLIDE 8 - FIRST PROTOTYPE (v0) -->
+    <div class="slide">
+        <div class="slide-header">FIRST PROTOTYPE — v0</div>
+        <div class="slide-content">
+            <h2>Initial prototype built in v0</h2>
+            <p>After building the first prototype, we identified what was possible and what needed adjustments. The main changes were:</p>
+            <ul>
+                <li>Removed reschedule option (due to territorial appointment complexity)</li>
+                <li>Added double-check cancellation with optional reason field</li>
+                <li>Increased emphasis on SUS educational content</li>
+                <li>Added UBS mass announcements block</li>
+                <li>Created direct feedback space (Contact Us)</li>
+            </ul>
+            <p><strong>🔗 First prototype (v0):</strong><br>
+            <a href="https://v0.app/chat/my-ubs-app-ssMNLno1SPY?ref=QR35UQ" target="_blank">https://v0.app/chat/my-ubs-app-ssMNLno1SPY?ref=QR35UQ</a></p>
+        </div>
+    </div>
+
+    <!-- SLIDE 9 - FINAL PROTOTYPE (Netlify) -->
+    <div class="slide">
+        <div class="slide-header">FINAL PROTOTYPE</div>
+        <div class="slide-content">
+            <h2>Complete interactive prototype</h2>
+            <p>After concept changes in v0, Claude was used to build a new prototype with the described alterations. Added to GitHub, released, and deployed on Netlify.</p>
+            <ul>
+                <li>Supports dark/light mode toggle</li>
+                <li>English/Portuguese bilingual toggle</li>
+                <li>Full 8-page navigation (Home, History, Community, About SUS, Contact)</li>
+                <li>Fully responsive and accessible (WCAG 2.1 AA)</li>
+            </ul>
+           
+            <p><strong>🔗 Live prototype (Netlify):</strong><br>
+            <a href="https://mysus.netlify.app/" target="_blank">https://mysus.netlify.app/</a></p>
+        </div>
+    </div>
+
+ <!-- SLIDE 9 - FINAL PROTOTYPE (Netlify) -->
+    <div class="slide">
+        <div class="slide-header">FINAL PROTOTYPE</div>
+        <div class="slide-content">
+           <img src="initialscreen.png" alt="initial screen app my sus" class="imageprop">
+           <img src="infosus.png" alt="information screen app my sus" class="imageprop">
+           <img src="contactus.png" alt="contact us screen app my sus" class="imageprop">
+        </div>
+    </div>
+
+    <!-- SLIDE 10 - ACCESSIBILITY (formerly slide 16) -->
+    <div class="slide">
+        <div class="slide-header">ACCESSIBILITY</div>
+        <div class="slide-content">
+            <div class="pain-point">
+                <strong>1. WCAG 2.1 AA compliant</strong><br>
+                Minimum touch targets: 48x48px. High contrast in light and dark themes.
+            </div>
+            <div class="pain-point">
+                <strong>2. Screen reader ready</strong><br>
+                Proper ARIA labels on all icons, buttons, images. Semantic HTML structure.
+            </div>
+            <div class="pain-point">
+                <strong>3. Text scaling support</strong><br>
+                Text scales to 200% without breaking layout. Focus indicators visible. Color never used alone to convey information.
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 11 - WHAT I LEARNED (formerly slide 17, impact removed) -->
+    <div class="slide">
+        <div class="slide-header">WHAT I LEARNED</div>
+        <div class="slide-content">
+            <h2>Key learnings from this project</h2>
+            <p>Implementing healthcare applications involves specific challenges: sensitive data, regulatory compliance (LGPD), and extreme accessibility requirements. Despite Brazil's large online presence, significant social contrasts exist. Simple applications are essential — with ease of use, speed on low-performance devices, and simple, objective language.</p>
+            <p style="margin-top: 1rem;">Starting this course with this challenge was incredibly motivating. The shift from "building a feature-rich app" to "solving a real communication gap in public health" changed my entire design approach.</p>
+        </div>
+    </div>
+
+    <!-- SLIDE 12 - NEXT STEPS (formerly slide 18) -->
+    <div class="slide">
+        <div class="slide-header">NEXT STEPS</div>
+        <div class="slide-content">
+            <div class="pain-point">
+                <strong>1. PWA installation</strong><br>
+                Add manifest.json and service worker to make the app installable on home screens (offline support).
+            </div>
+            <div class="pain-point">
+                <strong>2. Pilot with one UBS</strong><br>
+                Partner with a UBS in Parelheiros (37.8% no-show rate) to test real-world impact on primary loss reduction.
+            </div>
+            <div class="pain-point">
+                <strong>3. Add AI preventive recommendations</strong><br>
+                Implement age/sex-based exam reminders (mammography, pap smear, PSA, blood glucose) following Ministry of Health protocols.
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE 13 - LET'S CONNECT (formerly slide 19) -->
+    <div class="slide">
+        <div class="slide-header">LET'S CONNECT</div>
+        <div class="slide-content">
+            <p>This project is part of my UX Design coursework. I'm passionate about designing accessible digital health solutions for public systems in Brazil.</p>
+            <hr>
+            <p>📧 <strong>Email:</strong> lenise.santana@gmail.com</p>
+            <p>💼 <strong>LinkedIn:</strong> https://www.linkedin.com/in/lenise-santana-72b824311/</p>
+            <p>🌐 <strong>GitHub:</strong> https://github.com/Lemoraess</p>
+        </div>
+    </div>
+
+    <div class="footer-note">
+        My SUS App — UX Case Study | Lenise Santana | Project Week 1 - Transition into UX for Healthcare
+    </div>
+
+</body>
+</html>
